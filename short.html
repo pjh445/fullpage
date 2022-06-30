@@ -5,23 +5,24 @@
 		<meta name="viewport" content="width=device-width">
 		<title>드라마&영화 쇼츠</title>
 		<link rel="stylesheet" href="css/short.css">
+		<link rel="stylesheet" type="text/css" href="dist/fullpage.css" >	
+		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!--<script src="js/short.js"></script>-->
+		
 	</head>
 	<body>
 		<div id="layout">
 			<header>
 				<iframe src="top.html" title="상단 로고와 네비게이션" id="iftop"></iframe>
 				<div>
-					<button type="button">드라마</button>
-					<button type="button">영화</button>
-					<button type="button">카테고리&#9662;</button>
+					<button type="button" id="dramabut">드라마</button>
+					<button type="button" id="moviebut">영화</button>
+					<!-- <button type="button">카테고리&#9662;</button> -->
 				</div>
 			</header>
 			<main>
 				<div id="gb"></div>
-				
 					<section id="menubar1">
 					<h2>공유</h2>
 						<div>
@@ -63,31 +64,185 @@
 					</section>
 				<section id="about">
 				<h2>우측하단메뉴</h2>
-					
 					<div id="menubar2">
-						<p><span class="material-symbols-outlined">closed_caption</span>자막</p>
-						<p><span class="material-symbols-outlined">block</span>드라마 추천 안함</p>
-						<p><span class="material-symbols-outlined">flag </span>신고</p>
+						<p class="pointer"><span class="material-symbols-outlined">closed_caption</span>자막</p>
+						<p class="pointer"><span class="material-symbols-outlined">block</span>드라마 추천 안함</p>
+						<p class="pointer"><span class="material-symbols-outlined">flag </span>신고</p>
 					</div>
 				</section>
-				<section id="short">
-				<h2>영상들</h2>
-					<div class="sec" style="border:10px solid skyblue;height:100vh; overflow:hidden;">
-						<video  controls  style="width:100%; height:100vh;">
-							<source src="media/mylife.mp4" type="video/mp4">
-						</video>
-						<p>영상제목<br><img src="images/kbslogo.png" alt="kbs로고">KBS1 - 으라차차 내인생</p>
-					</div>
-					<div class="sec" style="border:10px solid red;height:100vh; overflow:hidden;">
-						<img src="images/s2.jpg" alt="2번동영상">
-						<p>영상제목<br><img src="images/kbslogo.png" alt="kbs로고">KBS2 - 황금가면</p>
-					</div>
-					<div class="sec" style="border:10px solid yellowgreen;height:100vh; overflow:hidden;">
-						<img src="images/s3.jpg" alt="3번동영상">
-						<p>영상제목<br><img src="images/mbclogo.png" alt="mbc로고">MBC - 비밀의 집</p>
-					</div>
+				<section id="comment">
+					<h2>댓글창</h2>
+					<section id="comtop">
+						<b>댓글</b>
+						<p>55</p>
+						<button type="button" class="material-symbols-outlined" id="close">close</button>
+					</section>
+					<section id="combot">
+						<section id="id">
+							<span class="material-symbols-outlined">account_circle</span>
+							<input type="text" id="username" placeholder="댓글 추가...">
+						</section>
+						<section id="com">
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+							
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+							<section class="space">
+								<span class="material-symbols-outlined">account_circle</span>
+								<section>
+									<div>
+										<p>닉네임 · 9시간 전</p>
+										<span class="material-symbols-outlined">more_vert</span>
+									</div>
+									<div>
+										<p>너무 기대되요!</p>
+									</div>
+									<div>
+										<p><span class="material-symbols-outlined">thumb_up</span> 234 <span class="material-symbols-outlined">thumb_down</span> 20  <span class="material-symbols-outlined">comment</span> 6</p>
+									</div>
+									<div>
+										<p>답글 6개</p>
+									</div>
+								</section>
+							</section>
+						</section>
+					</section>
 				</section>
+				<div id="fullpage" style=" position:initial;">
+					<!--<section id="dramashort">
+						<h2>영상들</h2>-->
+						<div class="section active" id="section0" style="height:100vh; border:10px solid red; overflow:hidden;">
+							<video  controls>
+								<source src="media/life.mp4" type="video/mp4">
+							</video>
+							<p>으라차차 내인생 53화 예고편<br><img src="images/kbslogo.png" alt="kbs로고">KBS1 - 으라차차 내인생</p>
+						</div>
+						<div class="section" id="section1" style="height:100vh; border:10px solid skyblue; overflow:hidden;">
+							<video  controls>
+								<source src="media/black.mp4" type="video/mp4">
+							</video>
+							<p>블랙의 신부 | 공식 티저 예고편<br><img src="images/netlogo.png" alt="넷플릭스">넷플릭스 - 블랙의 신부</p>
+						</div>
+						<div class="section" id="section2" style="height:100vh; border:10px solid yellowgreen; overflow:hidden;">
+							<img src="images/s3.jpg" alt="3번동영상">
+							<p>비밀의 집 예고편<br><img src="images/mbclogo.png" alt="mbc로고">MBC - 비밀의 집</p>
+						</div>
+					<!--</section>
+					<section id="movieshort" style="height:300vh;overflow:hidden; position:initial;">
+						<h2>영상들</h2>-->
+						<div class="section" id="section3"  style="height:100vh; border:10px solid tomato; overflow:hidden;">
+							<video  controls>
+								<source src="media/movie1.mp4" type="video/mp4">
+							</video>
+							<p>[외계+인] 1부 티저 예고편<br><img src="images/cjenmlogo.png" alt="cj enm 로고">CJ ENM - 최동훈 - 외계인</p>
+						</div>
+						<div class="section" id="section4" style="height:100vh; border:10px solid blue; overflow:hidden;">
+							<video  controls>
+								<source src="media/movie2.mp4" type="video/mp4">
+							</video>
+							<p>8월 IMAX 개봉확정 [비상선언] 공식 예고편<br><img src="images/showboxlogo.png" alt="쇼박스로고">㈜쇼박스 - 한재림 - 비상선언</p>
+						</div>
+						<div class="section" id="section5" style="height:100vh; border:10px solid pink; overflow:hidden;">
+							<img src="images/m1.jpg" alt="3번동영상">
+							<p>마녀2<br><img src="images/newlogo.png" alt="mbc로고">(주)NEW - 박훈정 - 마녀2</p>
+						</div>
+					<!--</section>-->
+				</div>
 			</main>
+			<section id="upload">
+				<h2>업로드</h2>
+				<div id="upload2">
+						<p class="pointer"><img src="images/logo.png" alt="logo">Shorts 영상 만들기</p>
+						<p class="pointer"><span class="material-symbols-outlined">file_upload</span>동영상 업로드</p>
+				</div>
+			</section>
 			<footer>
 				<div>
 					<a href="index.html" class="material-symbols-outlined">home</a>
@@ -96,7 +251,7 @@
 					<a href="short.html" class="material-symbols-outlined">live_tv</a>
 				</div>
 				<div>
-					<a href="#.html" class="material-symbols-outlined">add_circle</a>
+					<a href="#.html" class="material-symbols-outlined" id="upbut">add_circle</a>
 				</div>	
 				<div>	
 					<a href="sub.html" class="material-symbols-outlined">folder</a>
@@ -107,57 +262,20 @@
 			</footer>
 		</div>
 		<section id="menu">
-				<h2>우측메뉴</h2>
-					<button type="button" class="material-symbols-outlined">favorite</button><br>
-					<button type="button" class="material-symbols-outlined">chat</button><br>
-					<button type="button" id="share" class="material-symbols-outlined">share</button><br>
-					<a href="info.html" class="material-symbols-outlined">info</a><br>
-					<button id="more" type="button" class="material-symbols-outlined">more_horiz</button>
+			<h2>우측메뉴</h2>
+			<button type="button" class="material-symbols-outlined" id="fa" >favorite</button><br>
+			<button type="button" class="material-symbols-outlined" id="comm">chat</button><br>
+			<button type="button" id="share" class="material-symbols-outlined">share</button><br>
+			<a href="info.html" class="material-symbols-outlined">info</a><br>
+			<button id="more" type="button" class="material-symbols-outlined">more_horiz</button>
 		</section>
-				
-		<script>
-			window.onload = function(){
-					const elm = document.querySelectorAll('.sec');
-					const elmCount = elm.length;
-					elm.forEach(function(item, index){
-						item.addEventListener('mousewheel', function(event){
-							event.preventDefault();
-							let delta = 0;
-
-							if (!event) event = window.event;
-							if (event.wheelDelta) {
-									delta = event.wheelDelta / 120;
-									if (window.opera) delta = -delta;
-							} 
-							else if (event.detail)
-									delta = -event.detail / 3;
-
-							let moveTop = window.scrollY;
-							let elmSelector = elm[index];
-
-							// wheel down : move to next section
-							if (delta < 0){
-								if (elmSelector !== elmCount-1){
-									try{
-										moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
-									}catch(e){}
-								}
-							}
-							// wheel up : move to previous section
-							else{
-								if (elmSelector !== 0){
-									try{
-										moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
-									}catch(e){}
-								}
-							}
-
-							const body = document.querySelector('html');
-							window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
-						});
-					});
-				}
-		</script>
-				
+		<script src="js/short.js"></script>
+		<script type="text/javascript" src="dist/fullpage.js"></script>
+		<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+		//;sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+	});
+</script>
 	</body>
+	
 </html>
